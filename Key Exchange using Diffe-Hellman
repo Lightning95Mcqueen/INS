@@ -1,0 +1,30 @@
+Python code for implementing Diffie-Hellman Algorithm
+
+from random import randint
+
+def diffie_hellman(P, G, a, b):
+    print('The Value of P is : %d' % P)
+    print('The Value of G is : %d' % G)
+
+    # Alice's public key
+    x = int(pow(G, a, P))
+    print('Secret Number for Alice is : %d' % a)
+    print('Public Key for Alice is : %d' % x)
+
+    # Bob's public key
+    y = int(pow(G, b, P))
+    print('Secret Number for Bob is : %d' % b)
+    print('Public Key for Bob is : %d' % y)
+
+    # Shared secret keys
+    ka = int(pow(y, a, P))
+    kb = int(pow(x, b, P))
+    print('Secret key for Alice is : %d' % ka)
+    print('Secret Key for Bob is : %d' % kb)
+
+if __name__ == '__main__':
+    P = 23  # A small prime
+    G = 9   # A primitive root modulo P
+    a = 4   # Alice's secret
+    b = 6   # Bob's secret
+    diffie_hellman(P, G, a, b)
