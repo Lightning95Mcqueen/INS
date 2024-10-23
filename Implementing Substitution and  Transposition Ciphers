@@ -25,3 +25,26 @@ s = 3
 
 print("Text: " + text)
 print("Cipher: " + encrypt(text, s))
+
+
+Code: Python code for implementing Railfence Cipher
+
+def RailFence(txt):
+    result = ""
+
+    # Add characters at even indices first
+    for i in range(len(txt)):
+        if i % 2 == 0:
+            result += txt[i]
+
+    # Then add characters at odd indices
+    for i in range(len(txt)):
+        if i % 2 != 0:
+            result += txt[i]
+
+    return result
+
+# Get input from user
+string = input("Enter a string: ")
+print(RailFence(string))
+
