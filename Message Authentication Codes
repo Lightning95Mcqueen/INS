@@ -1,0 +1,25 @@
+Code: Python code for implementing MD5 Algorithm
+
+import hashlib
+
+# Calculate MD5 hashes
+result = hashlib.md5(b'Ismile')
+result1 = hashlib.md5(b'Esmile')
+
+# Printing the equivalent byte value
+print("The byte equivalent of hash for 'Ismile' is:", result.digest())
+print("The byte equivalent of hash for 'Esmile' is:", result1.digest())
+
+
+Code: Python code for implementing SHA Algorithm
+
+import hashlib
+
+# Get input from the user
+string = input("Enter the value to encode: ")
+
+# Calculate SHA-1 hash
+result = hashlib.sha1(string.encode())
+
+# Print the hexadecimal equivalent of SHA-1
+print("The hexadecimal equivalent of SHA-1 is:", result.hexdigest())
